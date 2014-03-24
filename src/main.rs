@@ -27,6 +27,7 @@ fn main() {
     let args = args();
 
     match args.tail().len() {
+        0 => unreachable!(),
         1 => main1(args[1]),
         2 => main2(args[1], args[2]),
         _ => usage(),
